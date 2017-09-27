@@ -26,6 +26,7 @@ export class CinemaService {
     this.movie1.hours = ["Wednesday 19:30", "22:30"];
     this.movie1.room = 1;
 
+
     this.movie2 = new Movie();
     this.movie2.id = 2;
     this.movie2.title = "The Godfather";
@@ -73,16 +74,17 @@ export class CinemaService {
     this.movie5.actors = ["Liam Neeson", "Ben Kingsley", "Ralph Fiennes", "Caroline Goodall", "Jonathan Sagall", "Embeth Davidtz"];
     this.movie5.hours = ["Friday 19:30", "22:30"];
     this.movie5.room = 5;
+
     this.movies = [this.movie1, this.movie2, this.movie3, this.movie4, this.movie5];
   }
 
-  getmovies() {
+  getMovies(): Movie[] {
     return this.movies;
   }
 
-  getMovie(id) {
+  getMovie(id): Movie[] {
     return this.movies.filter((item) => {
-      return item.id === id;
+      return item.id + '' === id + '';
     })
   }
 

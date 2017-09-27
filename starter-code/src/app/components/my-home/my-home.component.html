@@ -1,3 +1,10 @@
 <p>
   my-home works!
 </p>
+
+<ul>
+  <li for *ngFor="let movie of movies">
+    {{movie.title}}
+    <a [routerLink]="['/movies', movie.id]">View Info</a>
+  </li>
+</ul>
